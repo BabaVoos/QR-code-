@@ -1,0 +1,105 @@
+:root {
+    --background-color--: hsl(212, 45%, 89%);
+    --text-color--:  hsl(218, 44%, 22%);
+}
+
+
+body {
+    background-color: var(--background-color--);
+    color: var(--text-color--);
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+.container {
+    width: 280px;
+    background-color: white;
+    border-radius: 15px;
+    border: 15px solid white;
+    margin: auto;
+    transition: 1s;
+    animation-name: mudar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@media (max-width: 320px) {
+    .container {
+        width: 240px;
+    }
+    
+}
+.container:hover {
+    background-color: black;
+    color: white;
+    border: 15px solid black;
+}
+.image img{
+    width: 100%;
+    border-radius: 15px;
+    margin-right: auto;
+    margin-left: auto; 
+    animation-name: taher;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.bold {
+    padding: 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+@media (max-width: 320px) {
+    .bold {
+        font-size: 15px;
+        text-align: center;
+    }
+    
+}
+
+.regular {
+    font-size: 15px;
+    color: #7b879d;
+    text-align: center;
+}
+
+@media (max-width: 320px) {
+    .regular {
+        font-size: 13px;
+    }
+    
+}
+
+@keyframes mudar {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+  }
+
+@keyframes taher {
+    0% {
+        transform:rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
